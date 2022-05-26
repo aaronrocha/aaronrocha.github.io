@@ -1,102 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS only -->
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-
-
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js">
+</script>   
 
 <style>
   body {
     font-family: 'Old Standard TT', serif;
     font-size: 24px;
-    background-image: var(--bs-gradient);
+    background-color: #c9c9c3;
 }
 </style>
 </head>
-<body class="bg-primary p-2 text-white>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card text-center">
-                <div class="card-header">
-                    <h2>Aaron</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                    See below for added content. 
-                    </p>
-                    <p>
-                    Added a small change (more to come) below.  It is a quote from a work by Bill Orender, called "The last love letter".  It is for life insurance agents to remember why they do what they do.   
-                    </p>
-                </div>
-                <div class="card-footer text-muted">
-                  Wed Feb 23, 2022                
+<body>
+<py-script>
+print('Hello, World!')
+</py-script> 
+<py-script>
+print("Let's compute pi:")
+def compute_pi(n):
+  pi = 2
+  for i in range(1, n):
+    pi *= 4 * i ** 2 / (4 * i ** 2 - 1)
+  return pi
 
-                </div>
-            </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="aaron.jpg" class="card-img-top" alt="A picture of me.">
-          <div class="card-body">
-            <p class="card-text">This is me outside my favorite Mexican restaurant, Tacos and Beer.</p>
-          </div>
-          </div>
-        </div>
-    </div>
-</div>
-<br/>
-<p class="h1">The Last Love Letter</p>
-<br/>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Love Filled
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-      "You can have insurance without love, but you cannot have love without insurance."  Is it not your client's assurance with life insurance really a love-filled promise?  Wouldn't he or she feel at peace when he or she can look into the eyes of those they love, who love them, and say: "I love you so much that I have provided for you so that you will financially want for nothing if I'm not here."
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-       "I Promise" 
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-      Marriage and its commitments are promises.  A promise to protect and provide by and all means, when financial tragedy strikes.  Can your clients be counted on to keep his or her financial promises should his or her spouse die?
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-       A Symbol 
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-      A wedding ring is not just a piece of jewelry: it's a significant symbol of your client's commitment, pledge and duty as a protector and provider.  Life insurance is also a significant symbol of how your client sees his or her family in worth, love, dignity, respect and in the peace of mind he or she deserves.  Your client's family deserves protection don't they?
-      </div>
-    </div>
-  </div>
-</div>
-  
+pi = compute_pi(100000)
+s = f"pi is approximately {pi:.3f}"
+print(s)
+</py-script>
 </body>
 </html>
